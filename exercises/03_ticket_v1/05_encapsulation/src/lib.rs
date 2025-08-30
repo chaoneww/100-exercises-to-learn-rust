@@ -6,6 +6,20 @@ pub mod ticket {
     }
 
     impl Ticket {
+        pub fn title(&self) -> &str {
+            &self.title
+        }
+
+        pub fn description(&self) -> &str {
+            &self.description
+        }
+
+        pub fn status(&self) -> &str {
+            &self.status
+        }
+    }
+
+    impl Ticket {
         pub fn new(title: String, description: String, status: String) -> Ticket {
             if title.is_empty() {
                 panic!("Title cannot be empty");
